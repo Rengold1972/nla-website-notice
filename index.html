@@ -11,12 +11,11 @@
 :root{
     --nla-blue:#2D69B2;
     --nla-dark-blue:#0B4A97;
-    --nla-light-blue:#EAF2FC;
+    --nla-light-blue:#EEF5FF;
     --nla-gold:#F0E27A;
-    --nla-gold-light:#FFFBE6;
+    --nla-gold-light:#FFFDF0;
     --text:#2C3E50;
-    --white:#FFFFFF;
-    --shadow:0 15px 35px rgba(0,0,0,0.10);
+    --shadow:0 15px 35px rgba(0,0,0,0.08);
 }
 
 *{
@@ -27,58 +26,63 @@
 
 body{
     font-family:"Segoe UI", Arial, sans-serif;
-    background:#f5f8fc;
+    background:#F6F8FC;
     color:var(--text);
-    line-height:1.8;
-    font-size:24px;
+    line-height:1.7;
+    font-size:18px;
 }
 
-/* =========================
+/* =====================
    HEADER
-========================= */
+===================== */
 
 .header{
     background:#ffffff;
-    padding:30px 20px;
     text-align:center;
-    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+    padding:30px 20px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
 }
 
 .logo{
-    max-width:260px;
+    width:220px;
+    max-width:90%;
     height:auto;
 }
 
 .agency-name{
-    font-size:1.8rem;
-    font-weight:700;
+    margin-top:15px;
     color:var(--nla-dark-blue);
+    font-size:1.4rem;
+    font-weight:700;
     letter-spacing:1px;
-    margin-top:10px;
 }
 
-/* =========================
-   HERO SECTION
-========================= */
+/* =====================
+   HERO
+===================== */
 
 .hero{
-    background:linear-gradient(135deg,var(--nla-blue),var(--nla-dark-blue));
+    background:linear-gradient(
+        135deg,
+        var(--nla-blue),
+        var(--nla-dark-blue)
+    );
     color:white;
     text-align:center;
-    padding:90px 20px 130px;
+    padding:70px 20px 110px;
     position:relative;
-    overflow:hidden;
 }
 
 .hero::before{
     content:"";
     position:absolute;
     inset:0;
-    background:radial-gradient(
-        circle at center,
-        rgba(255,255,255,0.08),
-        transparent 70%
-    );
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,255,255,.06),
+            transparent 70%
+        );
 }
 
 .hero-content{
@@ -87,13 +91,14 @@ body{
 }
 
 .hero h1{
-    font-size:4.5rem;
+    font-size:2.75rem;
     font-weight:700;
+    line-height:1.2;
 }
 
-/* =========================
-   MAIN CONTAINER
-========================= */
+/* =====================
+   MAIN CONTENT
+===================== */
 
 .container{
     max-width:1200px;
@@ -104,128 +109,137 @@ body{
 }
 
 .notice-card{
-    background:#ffffff;
+    background:#fff;
     border-radius:20px;
-    padding:60px;
+    padding:45px;
     box-shadow:var(--shadow);
 }
 
+/* =====================
+   NOTICE
+===================== */
+
 .notice-highlight{
     background:var(--nla-light-blue);
-    border-left:8px solid var(--nla-blue);
+    border-left:6px solid var(--nla-blue);
     border-radius:12px;
-    padding:30px;
-    margin-bottom:40px;
-    font-size:1.5rem;
+    padding:24px;
+    margin-bottom:35px;
 }
 
 .notice-highlight h2{
     color:var(--nla-dark-blue);
-    margin-bottom:15px;
-    font-size:2.4rem;
+    font-size:1.75rem;
+    margin-bottom:12px;
+}
+
+.notice-highlight p{
+    font-size:1.1rem;
 }
 
 .notice-title{
     color:var(--nla-dark-blue);
+    font-size:2rem;
     margin-bottom:25px;
-    font-size:3rem;
 }
 
 .notice-card p{
-    margin-bottom:20px;
-    font-size:1.5rem;
+    font-size:1.1rem;
+    margin-bottom:18px;
 }
 
-/* =========================
+/* =====================
    SERVICES
-========================= */
+===================== */
 
 .service-section{
-    margin-top:45px;
+    margin-top:50px;
 }
 
 .service-section h3{
     color:var(--nla-dark-blue);
+    font-size:1.6rem;
     margin-bottom:25px;
-    font-size:2.2rem;
 }
 
 .services-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
 }
 
 .service-card{
-    background:#ffffff;
+    background:#fff;
     border-top:6px solid var(--nla-blue);
     border-radius:14px;
-    padding:30px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.06);
-    transition:all 0.3s ease;
-    font-size:1.5rem;
-}
-
-.service-card:hover{
-    transform:translateY(-4px);
+    padding:22px;
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
 }
 
 .service-card h4{
     color:var(--nla-dark-blue);
-    margin-bottom:15px;
-    font-size:1.8rem;
+    font-size:1.25rem;
+    margin-bottom:12px;
 }
 
-/* =========================
+.service-card p{
+    font-size:1rem;
+    margin-bottom:0;
+}
+
+/* =====================
    ASSISTANCE
-========================= */
+===================== */
 
 .assistance{
-    margin-top:40px;
+    margin-top:50px;
     background:var(--nla-gold-light);
-    border-left:8px solid var(--nla-gold);
+    border-left:6px solid var(--nla-gold);
+    padding:24px;
     border-radius:12px;
-    padding:30px;
-    font-size:1.5rem;
 }
 
 .assistance h3{
     color:var(--nla-dark-blue);
+    font-size:1.6rem;
     margin-bottom:15px;
-    font-size:2.2rem;
 }
 
-/* =========================
+.assistance p{
+    margin-bottom:0;
+}
+
+/* =====================
    LINKS
-========================= */
+===================== */
 
 .links-section{
-    margin-top:45px;
+    margin-top:50px;
 }
 
 .links-section h3{
     color:var(--nla-dark-blue);
+    font-size:1.6rem;
     margin-bottom:25px;
-    font-size:2.2rem;
 }
 
 .link-card{
     background:#f8fbff;
-    border:1px solid #d8e3f0;
+    border:1px solid #d7e2f0;
     border-radius:10px;
-    padding:22px;
-    margin-bottom:18px;
-    font-size:1.5rem;
+    padding:18px;
+    margin-bottom:15px;
 }
 
 .link-card strong{
     color:var(--nla-dark-blue);
+    font-size:1.15rem;
 }
 
 .link-card a{
-    color:var(--nla-dark-blue);
+    color:var(--nla-blue);
     text-decoration:none;
-    font-weight:600;
+    font-size:1rem;
     word-break:break-word;
 }
 
@@ -233,54 +247,55 @@ body{
     text-decoration:underline;
 }
 
-/* =========================
+/* =====================
    CLOSING MESSAGE
-========================= */
+===================== */
 
 .closing-message{
     text-align:center;
-    margin-top:40px;
-    font-size:1.5rem;
+    margin-top:50px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+.closing-message p{
+    font-size:1.1rem;
+    margin-bottom:18px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
 
 @media (max-width:768px){
 
-    body{
-        font-size:20px;
-    }
-
     .hero{
-        padding:60px 20px 100px;
+        padding:60px 20px 90px;
     }
 
     .hero h1{
-        font-size:2.8rem;
-    }
-
-    .notice-card{
-        padding:35px;
-    }
-
-    .notice-title{
-        font-size:2.2rem;
-    }
-
-    .notice-highlight h2{
         font-size:2rem;
     }
 
+    .notice-card{
+        padding:30px;
+    }
+
+    .notice-title{
+        font-size:1.6rem;
+    }
+
+    .notice-highlight h2,
     .service-section h3,
-    .links-section h3,
-    .assistance h3{
-        font-size:1.8rem;
+    .assistance h3,
+    .links-section h3{
+        font-size:1.4rem;
+    }
+
+    .agency-name{
+        font-size:1.1rem;
     }
 
     .logo{
-        max-width:200px;
+        width:180px;
     }
 }
 
@@ -318,9 +333,7 @@ body{
             <h2>Website Notice</h2>
 
             <p>
-                Please excuse our appearance while we update our content
-                to enhance your experience. All online services remain
-                fully operational.
+                Please excuse our appearance while we update our content to enhance your experience. All online services remain fully operational.
             </p>
 
         </div>
@@ -330,21 +343,15 @@ body{
         </h2>
 
         <p>
-            The National Land Agency is currently updating its website
-            to better serve our customers and stakeholders.
+            The National Land Agency is currently updating its website to better serve our customers and stakeholders.
         </p>
 
         <p>
-            As part of this initiative, we are enhancing the overall user
-            experience, improving navigation and accessibility, and
-            implementing key technology and cybersecurity upgrades to
-            strengthen the security and resilience of our online services.
+            As part of this initiative, we are enhancing the overall user experience, improving navigation and accessibility, and implementing key technology and cybersecurity upgrades to strengthen the security and resilience of our online services.
         </p>
 
         <p>
-            While the website's visual appearance may be temporarily
-            simplified during this transition, all essential online
-            services remain fully available and unaffected.
+            While the website’s visual appearance may be temporarily simplified during this transition, all essential online services remain fully available and unaffected.
         </p>
 
         <div class="service-section">
@@ -383,9 +390,7 @@ body{
             <h3>Need Assistance?</h3>
 
             <p>
-                Should you experience any issues or require assistance,
-                please access NLAConnect to submit a service request for
-                prompt review and resolution.
+                Should you experience any issues or require assistance, please access NLAConnect to submit a service request for prompt review and resolution.
             </p>
 
         </div>
@@ -427,13 +432,11 @@ body{
         <div class="closing-message">
 
             <p>
-                We sincerely apologize for any inconvenience caused and thank
-                you for your patience and understanding.
+                We sincerely apologize for any inconvenience caused and thank you for your patience and understanding.
             </p>
 
             <p>
-                We appreciate your continued support and invite you to revisit
-                the website soon to experience our enhanced platform.
+                We appreciate your continued support and invite you to revisit the website soon to experience our enhanced platform.
             </p>
 
         </div>
