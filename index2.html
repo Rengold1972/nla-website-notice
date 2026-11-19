@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>National Land Agency | Website Notice</title>
+
+<style>
+
+:root{
+    --nla-blue:#2D69B2;
+    --nla-dark-blue:#0B4A97;
+    --nla-light-blue:#EAF2FC;
+    --nla-gold:#F0E27A;
+    --nla-gold-light:#FFFBE6;
+    --text:#2C3E50;
+    --white:#FFFFFF;
+    --shadow:0 15px 35px rgba(0,0,0,0.10);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:#f5f8fc;
+    color:var(--text);
+    line-height:1.8;
+    font-size:24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    background:#ffffff;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo{
+    max-width:260px;
+    height:auto;
+}
+
+.agency-name{
+    font-size:1.8rem;
+    font-weight:700;
+    color:var(--nla-dark-blue);
+    letter-spacing:1px;
+    margin-top:10px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    background:linear-gradient(135deg,var(--nla-blue),var(--nla-dark-blue));
+    color:white;
+    text-align:center;
+    padding:90px 20px 130px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.08),
+        transparent 70%
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:4.5rem;
+    font-weight:700;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+    max-width:1200px;
+    margin:-70px auto 60px;
+    padding:0 20px;
+    position:relative;
+    z-index:10;
+}
+
+.notice-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:60px;
+    box-shadow:var(--shadow);
+}
+
+.notice-highlight{
+    background:var(--nla-light-blue);
+    border-left:8px solid var(--nla-blue);
+    border-radius:12px;
+    padding:30px;
+    margin-bottom:40px;
+    font-size:1.5rem;
+}
+
+.notice-highlight h2{
+    color:var(--nla-dark-blue);
+    margin-bottom:15px;
+    font-size:2.4rem;
+}
+
+.notice-title{
+    color:var(--nla-dark-blue);
+    margin-bottom:25px;
+    font-size:3rem;
+}
+
+.notice-card p{
+    margin-bottom:20px;
+    font-size:1.5rem;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.service-section{
+    margin-top:45px;
+}
+
+.service-section h3{
+    color:var(--nla-dark-blue);
+    margin-bottom:25px;
+    font-size:2.2rem;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:#ffffff;
+    border-top:6px solid var(--nla-blue);
+    border-radius:14px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    transition:all 0.3s ease;
+    font-size:1.5rem;
+}
+
+.service-card:hover{
+    transform:translateY(-4px);
+}
+
+.service-card h4{
+    color:var(--nla-dark-blue);
+    margin-bottom:15px;
+    font-size:1.8rem;
+}
+
+/* =========================
+   ASSISTANCE
+========================= */
+
+.assistance{
+    margin-top:40px;
+    background:var(--nla-gold-light);
+    border-left:8px solid var(--nla-gold);
+    border-radius:12px;
+    padding:30px;
+    font-size:1.5rem;
+}
+
+.assistance h3{
+    color:var(--nla-dark-blue);
+    margin-bottom:15px;
+    font-size:2.2rem;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.links-section{
+    margin-top:45px;
+}
+
+.links-section h3{
+    color:var(--nla-dark-blue);
+    margin-bottom:25px;
+    font-size:2.2rem;
+}
+
+.link-card{
+    background:#f8fbff;
+    border:1px solid #d8e3f0;
+    border-radius:10px;
+    padding:22px;
+    margin-bottom:18px;
+    font-size:1.5rem;
+}
+
+.link-card strong{
+    color:var(--nla-dark-blue);
+}
+
+.link-card a{
+    color:var(--nla-dark-blue);
+    text-decoration:none;
+    font-weight:600;
+    word-break:break-word;
+}
+
+.link-card a:hover{
+    text-decoration:underline;
+}
+
+/* =========================
+   CLOSING MESSAGE
+========================= */
+
+.closing-message{
+    text-align:center;
+    margin-top:40px;
+    font-size:1.5rem;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:768px){
+
+    body{
+        font-size:20px;
+    }
+
+    .hero{
+        padding:60px 20px 100px;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .notice-card{
+        padding:35px;
+    }
+
+    .notice-title{
+        font-size:2.2rem;
+    }
+
+    .notice-highlight h2{
+        font-size:2rem;
+    }
+
+    .service-section h3,
+    .links-section h3,
+    .assistance h3{
+        font-size:1.8rem;
+    }
+
+    .logo{
+        max-width:200px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <img src="NLA-Logo.jpg"
+         alt="National Land Agency Logo"
+         class="logo">
+
+    <div class="agency-name">
+        NATIONAL LAND AGENCY
+    </div>
+
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+        <h1>Website Enhancement in Progress</h1>
+    </div>
+
+</section>
+
+<div class="container">
+
+    <div class="notice-card">
+
+        <div class="notice-highlight">
+
+            <h2>Website Notice</h2>
+
+            <p>
+                Please excuse our appearance while we update our content
+                to enhance your experience. All online services remain
+                fully operational.
+            </p>
+
+        </div>
+
+        <h2 class="notice-title">
+            Improving Your Digital Experience
+        </h2>
+
+        <p>
+            The National Land Agency is currently updating its website
+            to better serve our customers and stakeholders.
+        </p>
+
+        <p>
+            As part of this initiative, we are enhancing the overall user
+            experience, improving navigation and accessibility, and
+            implementing key technology and cybersecurity upgrades to
+            strengthen the security and resilience of our online services.
+        </p>
+
+        <p>
+            While the website's visual appearance may be temporarily
+            simplified during this transition, all essential online
+            services remain fully available and unaffected.
+        </p>
+
+        <div class="service-section">
+
+            <h3>Services Currently Available</h3>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <h4>eLandJamaica</h4>
+                    <p>
+                        Access land and property information services online.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h4>JAMPROP</h4>
+                    <p>
+                        Access Jamaica Property Sales Data and market insights.
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <h4>OSSR</h4>
+                    <p>
+                        Submit and track online service requests.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="assistance">
+
+            <h3>Need Assistance?</h3>
+
+            <p>
+                Should you experience any issues or require assistance,
+                please access NLAConnect to submit a service request for
+                prompt review and resolution.
+            </p>
+
+        </div>
+
+        <div class="links-section">
+
+            <h3>Online Services</h3>
+
+            <div class="link-card">
+                <strong>OSSR</strong><br>
+                <a href="https://apps.nla.gov.jm/ossr/" target="_blank" rel="noopener noreferrer">
+                    https://apps.nla.gov.jm/ossr/
+                </a>
+            </div>
+
+            <div class="link-card">
+                <strong>eLandJamaica</strong><br>
+                <a href="https://elandjamaica.nla.gov.jm/elandjamaica/" target="_blank" rel="noopener noreferrer">
+                    https://elandjamaica.nla.gov.jm/elandjamaica/
+                </a>
+            </div>
+
+            <div class="link-card">
+                <strong>NLAConnect</strong><br>
+                <a href="https://apps.nla.gov.jm/nlaconnect/" target="_blank" rel="noopener noreferrer">
+                    https://apps.nla.gov.jm/nlaconnect/
+                </a>
+            </div>
+
+            <div class="link-card">
+                <strong>JAMPROP (Jamaica Property Sales Data)</strong><br>
+                <a href="https://jampropsales.nla.gov.jm/" target="_blank" rel="noopener noreferrer">
+                    https://jampropsales.nla.gov.jm/
+                </a>
+            </div>
+
+        </div>
+
+        <div class="closing-message">
+
+            <p>
+                We sincerely apologize for any inconvenience caused and thank
+                you for your patience and understanding.
+            </p>
+
+            <p>
+                We appreciate your continued support and invite you to revisit
+                the website soon to experience our enhanced platform.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
